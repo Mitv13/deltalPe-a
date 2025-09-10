@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>practica_magdalena</title>
+    <link rel="shortcut icon" href="M.png" type="image/x-icon">
+    <style>
+        *{
+          margin: 0;
+          padding: 0;
+          box-sizing: border-box;
+        }
+        nav{ /*inconos*/
+          background:#D5DEEF;
+          padding: 5px 20px;  
+          display: flex;
+          align-items: center;
+          position: sticky;
+          top: 0;
+          z-index: 100;
+          
+        }
+        nav a:hover{/*fondo de letra*/
+          color: #4FC3F7;
+          
+        }
+        #p1{
+          color: #15396A;
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 80px;
+        }
+        .logo {
+         display: flex;
+         align-items: center;  
+         margin-left: 5px; 
+        }
+        nav ul {  /*info menu*/
+          display: flex;
+          list-style: none;
+          gap: 58px;
+        }
+        nav ul li a {
+         text-decoration: none;
+         color: #333333;
+         font-weight: 700;
+         font-family: Arial, Helvetica, sans-serif;
+        }
+       body {
+         background-color: #FFFFFF
+         
+         
+        }
+
+        .banner {  /*fondo de cita */
+         background: linear-gradient(to right, #395886,#638ECB ,#8AAEE0, #B1C9EF,#D5DEEF,#F0F3FA);
+         color: white;
+         text-align: center;
+         padding: 70px 20px;
+         position: relative;
+        }
+        .banner h1 { /*boton de letra separacion*/
+         font-size: 9em;
+         margin-bottom: 50px;
+        }
+        .banner button { /*color de boton*/
+          background-color: #157DBD;
+         color: white;
+         border: none;
+         padding: 10px 20px;
+         font-size: 1.2em;
+         border-radius: 5px;
+         cursor: pointer;
+        }
+        .slideshow-container {
+         width: 600px;
+         height: 400px;
+         position: relative;
+         margin: auto;
+         margin-top: 20px;
+         margin-left: 10px;
+         display: flex;
+
+        }
+        .mySlides {
+         display: none;
+         width: 100%;
+         height: 100%;
+        }
+        img {
+        width: 495px;
+        height: 100PX;
+        object-fit: cover;
+        border-radius: 10px;
+        }
+        
+        #cuadro {
+         margin-left: 5px;     
+         background-color:#B1C9EF; 
+         font-size: 10px;
+         margin-left: 10px;
+         border-radius: 10px;
+        }
+        
+        #info{
+          font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+          font-size: 26px;
+          margin-left: 15px;  
+          width: 570px;
+          text-align: justify;
+         
+        }
+      
+
+         footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 6px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-contacto,
+    .footer-redes,
+    .footer-imgl {
+      flex: 1 1 200px;
+      min-width: 100px;
+    }
+
+    .footer-contacto p,
+    .footer-redes h4,
+    .footer-redes a {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .footer-contacto a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .footer-contacto a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-redes h4 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .redes-sociales-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .redes-sociales-grid a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      padding: 10px;
+      background-color: #222;
+      border-radius: 8px;
+      color: #ccc;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .redes-sociales-grid a:hover {
+      background-color: #00e676;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    .footer-imgl img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border: 4px solid #0d0d0e;
+      display: block;
+      margin: auto;
+    }
+
+    .footer-descripcion {
+      background-color: #292929;
+      color: #ddd;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 17px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-bottom {
+      background-color: #111;
+      text-align: center;
+      padding: 15px 10px;
+      color: #ccc;
+      font-size: 16px;
+      border-top: 1px solid #444;
+    }
+
+    @media screen and (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .redes-sociales-grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+    }
+    
+    </style>
+</head>
+    </style>
+      <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+<body>
+   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+  $(function() {
+    $(".toggle").on("click", function() {
+      if ($(".menu").hasClass("active")) {
+        $(".menu").removeClass("active");
+        $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+      } else {
+        $(".menu").addClass("active");
+        $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+      }
+    });
+  });
+</script>
+  </style>
+</head>
+<body id="yo">
+  <header>
+   <div class="logo">
+      <img src="logo4.jpg" alt="Logo" style="height: 80px; width: 110px;">
+      <p id="p1">Cuidado Dental Con Corazón</p>
+    </div>
+
+    <div class="top-bar"></div>
+      <nav>
+  <ul>
+    <li><a href="inicio.html">Inicio</a></li>
+    <li><a href="nosotros.html">Nosotros</a></li>
+    <li><a href="servicios.html">Servicios</a></li>
+    <li><a href="agenda2.html">Agenda tu cita</a></li>
+    <li><a href="contacto.html">Contáctanos</a></li>
+
+    <!-- Facebook -->
+    <li>
+      <a href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" target="_blank">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a>
+    </li>
+
+
+
+    <!-- Instagram -->
+    <li>
+      <a href="https://www.instagram.com/penadental?utm_source=qr&igsh=MXNzdmpidjh5YXRtOQ==" target="_blank">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a>
+    </li>
+
+    <!-- Mapa (Enlace externo a Google Maps) -->
+    <li>
+      <a href="https://www.google.com/maps/place/Unidad+Academica+Tulcingo+de+Valle" target="_blank">
+        <ion-icon name="location-sharp"></ion-icon>
+      </a>
+    </li>
+
+</li>
+
+
+    
+  </ul>
+</nav>
+
+    </div>
+  </header>
+  <div class="banner">
+    <h1>PIDE TU CITA<br><span style="color: #395886">¡AHORA!</span></h1>
+   <button onclick="window.location.href='agenda2.html'">🦷Agenda tu cita ya🦷</button>
+
+  </div>
+  <div class="slideshow-container">
+    <img class="mySlides" src="./01.jpg" alt="Imagen 1">
+    <img class="mySlides" src="./08.jpg" alt="Imagen 2">
+    <img class="mySlides" src="./011.jpg " alt="Imagen 3">
+    <img class="mySlides" src="./013.webp " alt="Imagen 4">
+    <img class="mySlides" src="./04.webp " alt="Imagen 5">
+    <img class="mySlides" src="./03.jpg " alt="Imagen 3">
+
+    <div id="cuadro" >
+       <div id="info"><H1>Cuidado dental con <br>
+        el corazón</H1></div>
+      <div id="info">
+        <p style="height: 300px; width: 550px;">
+          Lo primero es tener una mejor sonrisa para toda la 
+          vida.Una sonrisa saludable no solo refleja bienestar,
+          también protege tu salud cardíaca. Estudios han demostrado
+          que una buena higiene bucal puede ayudar a prevenir 
+          enfermedades del corazón.Cuidar tu sonrisa es más que 
+          estética, es cuidar de ti por dentro y por fuera.
+          ¡Empieza hoy, sonríe siempre y ama tu corazón!
+        </p>
+      </div>
+    </div>
+  </div>
+
+ <script>
+   let slideIndex = 0;
+   showSlides();
+
+   function showSlides() {
+     let i;
+     let slides = document.getElementsByClassName("mySlides");
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";  
+    }
+     slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+     slides[slideIndex - 1].style.display = "block";  
+     setTimeout(showSlides, 3000); // Cambia cada 3 segundos
+    }
+ </script>
+</body>
+
+    <!-- Font Awesome 6.5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    <style>
+    .facebook-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1877f2; /* Azul Facebook */
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 30px;
+      
+        z-index: 100;
+    }
+
+    .facebook-float i {
+        margin-top: 15px;
+    }
+
+    .facebook-float:hover {
+        background-color: #145dbf; /* Azul más oscuro al pasar el mouse */
+    }
+</style>
+
+<!-- Botón flotante de Facebook -->
+<a
+  href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" 
+  class="facebook-float"
+  target="_blank"
+  title="Síguenos en Facebook">
+    <i class="fab fa-facebook-f"></i> <!-- Icono de Facebook -->
+</a>
+
+<!-- Asegúrate de incluir Font Awesome para que se vea el icono -->
+<script src="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" crossorigin="anonymous"></script>
+
+<body>
+ 
+ <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2751.3418079202156!2d-98.44992662659426!3d18.04414838355702!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85cf29f0b416a3cb%3A0x317bc639516bab8e!2sUnidad%20Academica%20Tulcingo%20de%20Valle!5e1!3m2!1ses!2smx!4v1750726070625!5m2!1ses!2smx"
+    width="1210" 
+    height="500" 
+    style="border:0; margin-top: 12px;" 
+    allowfullscreen="" 
+    loading="lazy" 
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</body>
+
+<body>
+  <footer>
+    <div class="footer-contacto">
+      <p><strong>Teléfono de contacto:</strong></p>
+      <p><strong>770 185 77 36</strong></p>
+      <p><strong>Email:</strong>
+        <a href="mailto:desarrolladoressm@gmail.com">desarrolladoressm@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="footer-redes">
+      <h4>Síguenos en redes</h4>
+      <div class="redes-sociales-grid">
+        <a href="https://www.instagram.com/desarrolladoressm" target="_blank" title="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/share/1AqF7E1SmY/?mibextid=qi2Omg" target="_blank" title="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="mailto:desarrolladoressm@gmail.com" target="_blank" title="Correo">
+          <ion-icon name="mail-unread-sharp"></ion-icon>
+        </a>
+        <a href="https://wa.me/527701857736?text=Hola,%20quiero%20más%20información" target="_blank" title="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-imgl">
+      <img src="desarrollo.jpeg" alt="Logo o mapa del sitio">
+    </div>
+  </footer>
+
+  <!-- Texto abajo del footer -->
+  <div class="footer-descripcion">
+    Diseñamos y desarrollamos sitios web profesionales para negocios, tiendas en línea y marcas personales.
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Desarrolladores SM — Magdalena Moreno, Mitzi Valente, Sebastián Rodríguez. Todos los derechos reservados.
+  </div>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
