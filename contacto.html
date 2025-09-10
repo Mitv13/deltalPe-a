@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado Dental con Corazón</title>
+
+  <!-- Iconos Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+  <!-- Iconos FontAwesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    nav {
+      background: #D5DEEF;
+      padding: 5px 20px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a:hover {
+      color: #4FC3F7;
+    }
+
+    #p1 {
+      color: #15396A;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 58px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6e8f9;
+      color: #333;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 5px;
+    }
+
+    header h1, header p {
+      text-align: center;
+    }
+
+    .fondo {
+      background-image: url('e30.jpg'); /* Cambia esta URL por tu imagen */
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      min-height: 600px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .fondo-contenido {
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      text-shadow: 2px 2px 5px black;
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 1000px;
+      width: 100%;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .mensaje {
+      font-size: 28px;
+      font-weight: bold;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .contenido-columnas {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .columna {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .columna p, .columna a {
+      font-size: 18px;
+      margin-bottom: 10px;
+      color: white;
+      text-decoration: none;
+    }
+
+    .columna a:hover {
+      text-decoration: underline;
+    }
+
+    .iconos-redes a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+      footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 6px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-contacto,
+    .footer-redes,
+    .footer-imgl {
+      flex: 1 1 200px;
+      min-width: 100px;
+    }
+
+    .footer-contacto p,
+    .footer-redes h4,
+    .footer-redes a {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .footer-contacto a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .footer-contacto a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-redes h4 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .redes-sociales-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .redes-sociales-grid a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      padding: 10px;
+      background-color: #222;
+      border-radius: 8px;
+      color: #ccc;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .redes-sociales-grid a:hover {
+      background-color: #00e676;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    .footer-imgl img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border: 4px solid #0d0d0e;
+      display: block;
+      margin: auto;
+    }
+
+    .footer-descripcion {
+      background-color: #292929;
+      color: #ddd;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 17px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-bottom {
+      background-color: #111;
+      text-align: center;
+      padding: 15px 10px;
+      color: #ccc;
+      font-size: 16px;
+      border-top: 1px solid #444;
+    }
+
+    @media screen and (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .redes-sociales-grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+    }
+    
+    
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">
+      <img src="logo4.jpg" alt="Logo" style="height: 90px; width: 110px;">
+      <p id="p1">Cuidado Dental Con Corazón</p>
+    </div>
+
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="agenda2.html">Agenda tu cita</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+        <li><a href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/_mitg_em17?igsh=cW56ZTBqb2cxbTZ6"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="location-sharp"></ion-icon></a></li>
+      
+       
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Sección principal -->
+ <div class="fondo">
+  <div class="fondo-contenido">
+    <p class="mensaje">
+      ¡Estamos aquí para cuidar tu sonrisa!<br>
+      No dudes en contactarnos para agendar tu cita o resolver cualquier duda.
+    </p>
+    <div class="contenido-columnas">
+      <div class="columna iconos-redes">
+        <a href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL">
+          <ion-icon name="logo-facebook"></ion-icon> Facebook
+        </a>
+       
+        <a href="https://www.instagram.com/_mitg_em17?igsh=cW56ZTBqb2cxbTZ6">
+          <ion-icon name="logo-instagram"></ion-icon> Instagram
+        </a>
+        <a href="https://www.google.com/maps/place/Unidad+Academica+Tulcingo+de+Valle/@18.044065,-98.449788,17z" target="_blank">
+        <ion-icon name="location-sharp"></ion-icon> Ubicación
+        </a>
+
+        <a href="https://wa.me/529531563588?text=Hola,%20quiero%20más%20información">
+          <ion-icon name="logo-whatsapp"></ion-icon> WhatsApp
+        </a>
+      </div>
+      <div class="columna">
+        <p><strong>Dra. Maria Angelina Peña Gonzàles</strong></p>
+        <p>Odontología General</p>
+        <p>📌 Dirección: Col. Centro Calle Guerrero #36, Tlapa, Gro.</p>
+        <p>📞 Teléfono: 953-156-35-88</p>
+        <p>📧 Email: dentalpena@gmail.com</p>
+        <p>🕒 Horario: Lunes a Viernes, 10:00 a.m. - 8:00 p.m.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+    .facebook-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1877f2; /* Azul Facebook */
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 30px;
+       
+        z-index: 100;
+    }
+
+    .facebook-float i {
+        margin-top: 15px;
+    }
+
+    .facebook-float:hover {
+        background-color: #145dbf; /* Azul más oscuro al pasar el mouse */
+    }
+</style>
+
+<!-- Botón flotante de Facebook -->
+<a
+  href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" 
+  class="facebook-float"
+  target="_blank"
+  title="Síguenos en Facebook">
+    <i class="fab fa-facebook-f"></i> <!-- Icono de Facebook -->
+</a>
+
+<!-- Asegúrate de incluir Font Awesome para que se vea el icono -->
+<script src="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" crossorigin="anonymous"></script>
+
+
+</body>
+<body>
+  <footer>
+    <div class="footer-contacto">
+      <p><strong>Teléfono de contacto:</strong></p>
+      <p><strong>770 185 77 36</strong></p>
+      <p><strong>Email:</strong>
+        <a href="mailto:desarrolladoressm@gmail.com">desarrolladoressm@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="footer-redes">
+      <h4>Síguenos en redes</h4>
+      <div class="redes-sociales-grid">
+        <a href="https://www.instagram.com/desarrolladoressm" target="_blank" title="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/share/1AqF7E1SmY/?mibextid=qi2Omg" target="_blank" title="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="mailto:desarrolladoressm@gmail.com" target="_blank" title="Correo">
+          <ion-icon name="mail-unread-sharp"></ion-icon>
+        </a>
+        <a href="https://wa.me/527701857736?text=Hola,%20quiero%20más%20información" target="_blank" title="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-imgl">
+      <img src="desarrollo.jpeg" alt="Logo o mapa del sitio">
+    </div>
+  </footer>
+
+  <!-- Texto abajo del footer -->
+  <div class="footer-descripcion">
+    Diseñamos y desarrollamos sitios web profesionales para negocios, tiendas en línea y marcas personales.
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Desarrolladores SM — Magdalena Moreno, Mitzi Valente, Sebastián Rodríguez. Todos los derechos reservados.
+  </div>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

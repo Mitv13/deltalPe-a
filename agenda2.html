@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cuidado Dental Con Corazón</title>
+
+  <!-- Iconos -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f9fc;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    nav {
+      background: #D5DEEF;
+      padding: 5px 20px;
+      display: flex;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a:hover {
+      color: #4FC3F7;
+    }
+
+    #p1 {
+      color: #15396A;
+      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      font-size: 80px;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 58px;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #333333;
+      font-weight: 700;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    header {
+      background-color: #ffffff;
+      padding: 5px;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 500px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      text-align: center;
+      color: #026b63;
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      color: #333;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border-radius: 6px;
+      border: 1px solid #cccccc;
+      font-size: 14px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 12px;
+      width: 100%;
+      background-color: #02a18c;
+      border: none;
+      color: white;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #028974;
+    }
+    
+
+     footer {
+      background-color: #1f1f1f;
+      color: #fff;
+      padding: 6px 10px;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 30px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-contacto,
+    .footer-redes,
+    .footer-imgl {
+      flex: 1 1 200px;
+      min-width: 100px;
+    }
+
+    .footer-contacto p,
+    .footer-redes h4,
+    .footer-redes a {
+      font-size: 17px;
+      line-height: 1.6;
+    }
+
+    .footer-contacto a {
+      color: #00bcd4;
+      text-decoration: none;
+    }
+
+    .footer-contacto a:hover {
+      text-decoration: underline;
+    }
+
+    .footer-redes h4 {
+      margin-bottom: 10px;
+      font-size: 15px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .redes-sociales-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 10px;
+    }
+
+    .redes-sociales-grid a {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 26px;
+      padding: 10px;
+      background-color: #222;
+      border-radius: 8px;
+      color: #ccc;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+    }
+
+    .redes-sociales-grid a:hover {
+      background-color: #00e676;
+      color: #111;
+      transform: scale(1.05);
+    }
+
+    .footer-imgl img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border: 4px solid #0d0d0e;
+      display: block;
+      margin: auto;
+    }
+
+    .footer-descripcion {
+      background-color: #292929;
+      color: #ddd;
+      text-align: center;
+      padding: 15px 10px;
+      font-size: 17px;
+      line-height: 1.6;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .footer-bottom {
+      background-color: #111;
+      text-align: center;
+      padding: 15px 10px;
+      color: #ccc;
+      font-size: 16px;
+      border-top: 1px solid #444;
+    }
+
+    @media screen and (max-width: 768px) {
+      footer {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .redes-sociales-grid {
+        grid-template-columns: 1fr;
+        justify-content: center;
+      }
+    }
+    
+  </style>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script>
+    $(function () {
+      $(".toggle").on("click", function () {
+        if ($(".menu").hasClass("active")) {
+          $(".menu").removeClass("active");
+          $(this).find("a").html("<ion-icon name='menu-outline'></ion-icon>");
+        } else {
+          $(".menu").addClass("active");
+          $(this).find("a").html("<ion-icon name='close-outline'></ion-icon>");
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo4.jpg" alt="Logo" style="height: 90px; width: 110px;">
+      <p id="p1">Cuidado Dental Con Corazón</p>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="inicio.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="servicios.html">Servicios</a></li>
+        <li><a href="agenda.html">Agenda tu cita</a></li>
+        <li><a href="contacto.html">Contáctanos</a></li>
+        <li><a href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL"><ion-icon name="logo-facebook"></ion-icon></a></li>
+        <li><a href="https://www.instagram.com/_mitg_em17?igsh=cW56ZTBqb2cxbTZ6"><ion-icon name="logo-instagram"></ion-icon></a></li>
+        <li><a href="#"><ion-icon name="location-sharp"></ion-icon></a></li>
+       
+     
+      </ul>
+    </nav>
+  </header>
+
+  <div class="container">
+    <h2>Consulta Dental</h2>
+    <form action="guardar_consulta.php" method="post">
+  
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="nombre">Apellido Paterno:</label>
+      <input type="text" id="apellido_paterno" name="apellido_paterno" required>
+
+      <label for="nombre">Apellido Materno:</label>
+      <input type="text" id="apellido_materno" name="apellido_materno" required>
+
+      <label for="edad">Edad:</label>
+      <input type="number" id="edad" name="edad" min="0" required>
+
+      <label for="telefono">Teléfono:</label>
+      <input type="tel" id="telefono" name="telefono" placeholder="Ej. 555-123-4567" required>
+
+      <label for="fecha">Fecha de consulta:</label>
+      <input type="date" id="fecha" name="fecha" required>
+
+      <label for="hora">Hora de consulta:</label>
+    <select id="hora" name="hora" required>
+      <option value="">Seleccione una hora</option>
+      <option value="09:00">9:00 a.m </a></option>
+      <option value="10:00">10:00 a.m</option>
+      <option value="11:00">11:00 a.m</option>
+      <option value="12:00">12:00 p.m</option>
+      <option value="13:00">1:00  p.m</option>
+      <option value="14:00">2:00  p.m</option>
+      <option value="15:00">3:00  p.m</option>
+      <option value="16:00">4:00  p.m</option>
+      <option value="17:00">5:00  p.m</option>
+      <option value="18:00">6:00  p.m</option>
+      <option value="19:00">7:00  p.m</option>
+      <option value="20:00">8:00  p.m</option>
+    </select>
+
+      <label for="motivo">Motivo de la consulta:</label>
+      <textarea id="motivo" name="motivo" rows="4" placeholder="Describe brevemente tu problema dental..." required></textarea>
+
+      <label for="tratamiento">¿Ha recibido tratamiento dental anteriormente?</label>
+      <select id="tratamiento" name="tratamiento" required>
+        <option value="">Seleccione una opción</option>
+        <option value="si">Sí</option>
+        <option value="no">No</option>
+      </select>
+
+      <label for="alergias">¿Tiene alguna alergia o condición médica relevante?</label>
+      <textarea id="alergias" name="alergias" rows="3" placeholder="Indique si es alérgico/a a medicamentos, anestesia, etc."></textarea>
+
+      <label for="medicamentos">¿Está tomando algún medicamento actualmente?</label>
+      <textarea id="medicamentos" name="medicamentos" rows="3" placeholder="Especifique si aplica"></textarea>
+
+      <button type="submit">Enviar Consulta</button>
+    </form>
+  </div>
+  <!-- Font Awesome 6.5 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+    
+<style>
+    .facebook-float {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        background-color: #1877f2; /* Azul Facebook */
+        color: white;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        text-align: center;
+        font-size: 30px;
+        
+        z-index: 100;
+    }
+
+    .facebook-float i {
+        margin-top: 15px;
+    }
+
+    .facebook-float:hover {
+        background-color: #145dbf; /* Azul más oscuro al pasar el mouse */
+    }
+</style>
+
+<!-- Botón flotante de Facebook -->
+<a
+  href="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" 
+  class="facebook-float"
+  target="_blank"
+  title="Síguenos en Facebook">
+    <i class="fab fa-facebook-f"></i> <!-- Icono de Facebook -->
+</a>
+
+<!-- Asegúrate de incluir Font Awesome para que se vea el icono -->
+<script src="https://www.facebook.com/dental.pena.2025?mibextid=ZbWKwL" crossorigin="anonymous"></script>
+
+
+
+
+
+
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const apellidoPaterno = document.getElementById("apellido_paterno").value;
+  const apellidoMaterno = document.getElementById("apellido_materno").value;
+  const edad = document.getElementById("edad").value;
+  const telefono = document.getElementById("telefono").value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const motivo = document.getElementById("motivo").value;
+  const tratamiento = document.getElementById("tratamiento").value;
+  const alergias = document.getElementById("alergias").value;
+  const medicamentos = document.getElementById("medicamentos").value;
+
+  const numeroDestino = "5219531563588"; // Número con código de país
+
+  const mensaje = `
+ Nueva consulta dental:
+ ${nombre} ${apellidoPaterno} ${apellidoMaterno}
+Edad: ${edad}
+ ${telefono}
+${fecha} a las ${hora}
+Motivo: ${motivo}
+Tratamiento previo: ${tratamiento}
+Alergias: ${alergias}
+Medicamentos: ${medicamentos}
+  `;
+
+  // Abrir WhatsApp con el mensaje
+  window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`, "_blank");
+});
+</script>
+
+</body>
+<body>
+  <footer>
+    <div class="footer-contacto">
+      <p><strong>Teléfono de contacto:</strong></p>
+      <p><strong>770 185 77 36</strong></p>
+      <p><strong>Email:</strong>
+        <a href="mailto:desarrolladoressm@gmail.com">desarrolladoressm@gmail.com</a>
+      </p>
+    </div>
+
+    <div class="footer-redes">
+      <h4>Síguenos en redes</h4>
+      <div class="redes-sociales-grid">
+        <a href="https://www.instagram.com/desarrolladoressm" target="_blank" title="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://www.facebook.com/share/1AqF7E1SmY/?mibextid=qi2Omg" target="_blank" title="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="mailto:desarrolladoressm@gmail.com" target="_blank" title="Correo">
+          <ion-icon name="mail-unread-sharp"></ion-icon>
+        </a>
+        <a href="https://wa.me/527701857736?text=Hola,%20quiero%20más%20información" target="_blank" title="WhatsApp">
+          <ion-icon name="logo-whatsapp"></ion-icon>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-imgl">
+      <img src="desarrollo.jpeg" alt="Logo o mapa del sitio">
+    </div>
+  </footer>
+
+  <!-- Texto abajo del footer -->
+  <div class="footer-descripcion">
+    Diseñamos y desarrollamos sitios web profesionales para negocios, tiendas en línea y marcas personales.
+  </div>
+
+  <div class="footer-bottom">
+    &copy; 2025 Desarrolladores SM — Magdalena Moreno, Mitzi Valente, Sebastián Rodríguez. Todos los derechos reservados.
+  </div>
+
+  <!-- Ionicons -->
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+
+
+<script>
+document.querySelector("form").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const nombre = document.getElementById("nombre").value;
+  const apellidoPaterno = document.getElementById("apellido_paterno").value;
+  const apellidoMaterno = document.getElementById("apellido_materno").value;
+  const edad = document.getElementById("edad").value;
+  const telefono = document.getElementById("telefono").value;
+  const fecha = document.getElementById("fecha").value;
+  const hora = document.getElementById("hora").value;
+  const motivo = document.getElementById("motivo").value;
+  const tratamiento = document.getElementById("tratamiento").value;
+  const alergias = document.getElementById("alergias").value;
+  const medicamentos = document.getElementById("medicamentos").value;
+
+  const numeroDestino = "5219531563588"; // Número con código de país
+
+  const mensaje = `
+Nueva consulta dental:
+${nombre} ${apellidoPaterno} ${apellidoMaterno}
+Edad: ${edad}
+${telefono}
+${fecha} a las ${hora}
+Motivo: ${motivo}
+Tratamiento previo: ${tratamiento}
+Alergias: ${alergias}
+Medicamentos: ${medicamentos}
+  `;
+
+  // Abrir WhatsApp con el mensaje
+  window.open(`https://wa.me/${numeroDestino}?text=${encodeURIComponent(mensaje)}`, "_blank");
+});
+</script>
+
+</body>
+
+</html>
